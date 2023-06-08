@@ -1,0 +1,108 @@
+*,
+**::before,
+**::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+body{
+    background-image: url(/asset/images/zach.jpg);
+    background-image: url(/asset/images/flowers.avif);
+
+    background-size: cover;
+}
+
+.links{
+    justify-content: space-around;
+    margin-top: 55px;
+}
+
+   a{
+    
+    justify-content: center;
+    margin-left: 30px;
+    padding: 16px;
+    background-color: bisque;
+    text-decoration: none;
+    border-radius: 2px;
+    
+
+   }
+
+   a:hover{
+    transition-duration: 4s;
+    color: #6B5B95;
+    background-color: brown;
+  
+   }
+
+  .links button{
+  
+    justify-content: center;
+    margin-left: 30px;
+    padding: 16px;
+    background-color: bisque;
+    
+    border-radius: 2px;
+}
+
+.main{
+    margin-left: 300px;
+    padding-left: 300px;
+}
+.main img{
+    width:400px;
+    height: 15vh;
+}
+
+section{
+    color: blueviolet;
+    font-size: large;
+}
+
+.question{
+    margin-left: 45px;
+}
+
+ul{
+    width:60%;
+    height: 37vh;
+    border-radius: 6px;
+    background-image: linear-gradient(to top left, rgba(217, 159, 159, 0.6) 0%, rgba(81, 88, 133, 0.9) 100%);
+    list-style-type: lower-alpha;
+    gap:12px;
+    margin-top: 7px;
+    padding-top: 3px;
+}
+
+li{
+    padding: 12px;
+    margin-top: 12px;
+    background-color: aqua;
+    border-radius: 6px;
+    width: 80%;
+
+
+}
+
+ section ul li:nth-child(2n+1){
+    background-color: chartreuse;
+}
+
+section ul li:hover:nth-child(2n+1){
+    background-color: burlywood;
+}
+
+li:checked{
+    background-color: black;
+}
+
+li:hover{
+    background-color: azure;
+}
+
+button{
+    background-color: plum;
+    color: aliceblue;
+}

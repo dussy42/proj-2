@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comptia A practice Quiz</title>
+    <link rel="stylesheet" type="text/css" href="asset/comptia.css">
+</head>
+
+<body>
+
+    <div class="links">
+        <a href="" target="_blank" alt="home- button">Home</a>
+        <button onclick="rule()"> Rules</button>
+    </div>
+    <ul>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+    </ul>
+    
+    <div class="main">
+        <h1>Dice Game</h1>
+        <a href="dice.html" target="_blank" alt="Start-Game">Start Game</a>
+        
+    </div>
+    <div class="main">
+    <h1>Comptia A+ 220-1001 Certification Questions Answers</h1>
+    <img src="asset/images/comptia-a-220-1001-exam-answer.webp" alt="comptia logo">
+    
+     
+     <button onclick="user()">welcome</button>
+     <input for="text" id="username" value="Enter username">
+
+    <section>
+        <div class="question">
+            <p> 1. Which of the following has a P4 connector to provide a 12V output?</p>
+            <uL>
+                <li id="first">SCSI cable</li>
+                <li id="second">24-pin adapter</li>
+                <li id="third">eSATA cable</li>
+                <li id="fourth">EIDE port</li>
+            </uL>
+            <button onclick="rev()" >Reveal Answer</button>
+            <span id="pan"></span>
+
+        </div>
+
+
+    
+       
+
+        
+
+    </section>
+
+</body>
+
+
+<script>
+    /* Here is the rule section for the comptia A review question*/
+
+function rule(){
+           var ul=document.getElementsByTagName("ul");
+           
+           var listItems=document.getElementsByTagName("p")
+           ul.innerText="Game Rules";
+           listItems[0].innerText="Click the start game button";
+           listItems[1].innerText="A score will be rendered onscreen";
+           listItems[2].innerText="Press Hold button to push your score to the score button";
+           listItems[3].innerText="While on hold, the second Player could do the same as in 1 and two";
+           
+        }
+    
+
+/* the definition of correct answer for question 1*/
+let boxes=document.getElementsByTagName("li");
+for(let box of boxes){
+    box.addEventListener("click", function onClick(){
+        var rightAns=document.getElementById("fourth")
+        let correct=rightAns;/*
+        rightAns.innerHTML= "EIDE port" + " correct answer";
+            rightAns.style.backgroundColor="white";
+            preventDefault() */
+            if(correct===`${secondQues}`){
+                first()
+            }
+            else if(correct===secondQues){
+                sec()
+            }
+            else if(correct===thirdQues){
+                third()
+            }
+            else{
+                rightAns.innerHTML= "EIDE port" + " correct answer";
+            rightAns.style.backgroundColor="white";
+            }
+    });
+}
+
+/* declaring option one if clicked */
+let firstQues=document.getElementById("first");
+firstQues.addEventListener("click", function first(){
+firstQues.style.backgroundColor="goldenrod"
+
+});
+
+/* declaring option two if clicked */
+let secondQues=document.getElementById("second");
+secondQues.addEventListener("click", function sec(){
+secondQues.style.backgroundColor="goldenrod"
+
+});
+
+/* declaring option third if clicked */
+let thirdQues=document.getElementById("third");
+thirdQues.addEventListener("click", function third(){
+thirdQues.style.backgroundColor="goldenrod";
+
+});
+
+
+
+
+/* function to reveal answer*/
+function rev(){
+  document.getElementById("pan").textContent= "EIDE port";
+   document.getElementById("pan").style.backgroundColor="white"
+};
+
+
+</script>
+</html>
